@@ -1,0 +1,104 @@
+/* -------------------------------------------------
+   0. GLOBAL RESET & VARIABLES
+   ------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+}
+body {
+  background: #f4f4f4;
+  color: #222;
+  padding: 1rem;
+}
+
+/* colour palette */
+:root {
+  --bg: #fff;
+  --text: #222;
+  --accent: #0066cc;
+  --accent-dark: #004999;
+}
+
+/* -------------------------------------------------
+   1. HEADER & NAV
+   ------------------------------------------------- */
+.site-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.site-header h1 {
+  font-size: 2rem;
+}
+.tagline {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.main-nav {
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+.main-nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------------------------------
+   2. PRODUCT GRID
+   ------------------------------------------------- */
+.product-grid {
+  max-width: 1200px;
+  margin: auto;
+}
+.product-grid .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.product-card {
+  background: var(--bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  position: relative;
+}
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.product-card h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.1rem;
+}
+.product-card .price {
+  color: #e74c3c;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.product-card .desc {
+  font-size: 0.9rem;
+  color: #555;
+}
