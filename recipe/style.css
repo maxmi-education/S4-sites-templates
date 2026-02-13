@@ -1,0 +1,62 @@
+/* ----------------------------------------------------
+   BASIC RESET & TYPOGRAPHY
+   ---------------------------------------------------- */
+*,
+*::before,
+*::after { box-sizing: border-box; margin:0; padding:0; }
+html { font-family: "Poppins", sans-serif; line-height:1.5; }
+body { background:#fafafa; color:#333; padding:1rem; }
+
+/* ----------------------------------------------------
+   LAYOUT
+   ---------------------------------------------------- */
+.site-header,
+.site-footer { text-align:center; margin-bottom:1rem; }
+
+.recipe { max-width:900px; margin:auto; background:#fff; padding:1.5rem; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.1); }
+
+.intro { display:flex; flex-direction:column; gap:1rem; margin-bottom:2rem; }
+.hero img { width:100%; height:auto; border-radius:6px; object-fit:cover; }
+.summary { font-size:1.1rem; }
+
+.ingredients,
+.method { margin-bottom:2rem; }
+.ingredients ul,
+.method ol { margin-left:1.5rem; }
+
+@media (min-width:768px) {
+    .intro { flex-direction:row; }
+    .hero { flex:1 1 45%; }
+    .summary { flex:1 1 55%; align-self:center; }
+    .ingredients,
+    .method { column-count:2; column-gap:2rem; }
+}
+
+/* ----------------------------------------------------
+   PRINT BUTTON
+   ---------------------------------------------------- */
+.print-btn {
+    display:inline-block;
+    padding:.5rem 1rem;
+    background:#0066cc;
+    color:#fff;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+}
+.print-btn:hover { background:#004999; }
+
+/* ----------------------------------------------------
+   OPTIONAL FAVORITE TOGGLE (fast‑finish)
+   ---------------------------------------------------- */
+.favorite {
+    display:none;
+}
+.favorite + label {
+    font-size:1.5rem;
+    cursor:pointer;
+    color:#bbb;
+}
+.favorite:checked + label {
+    color:#e74c3c;
+}

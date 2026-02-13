@@ -1,0 +1,77 @@
+/* ----------------------------------------------------
+   0. BASIC RESET & VARIABLES
+   ---------------------------------------------------- */
+*,
+*::before,
+*::after { box-sizing:border-box; margin:0; padding:0; }
+
+:root {
+    --font-primary: "Montserrat", sans-serif;
+    --bg-light: #ffffff;
+    --bg-dark:  #2c3e50;
+    --text-light:#333;
+    --text-dark:#ecf0f1;
+    --primary:#0066cc;
+}
+
+/* ----------------------------------------------------
+   1. GLOBAL TYPOGRAPHY
+   ---------------------------------------------------- */
+html { font-family:var(--font-primary); }
+body { background:var(--bg, #fff); color:var(--text, #333); line-height:1.6; }
+
+/* ----------------------------------------------------
+   1. HERO SECTION (this is the big (missing) image at the center top
+   ---------------------------------------------------- */
+.hero {
+    background:url('images/hero.jpg') center/cover no-repeat;
+    height:300px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.hero__overlay {
+    background:linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.3));
+    text-align:center;
+    color:#fff;
+    padding:2rem;
+}
+.hero h1 { font-size:2.5rem; margin-bottom:.5rem; }
+.tagline { font-size:1.2rem; }
+
+/* ----------------------------------------------------
+   2. NAVIGATION (Flexbox) (this is that blue line with links)
+   ---------------------------------------------------- */
+.main-nav {
+    background:var(--primary);
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:.5rem 1rem;
+}
+.main-nav ul { display:flex; gap:1rem; list-style:none; }
+.main-nav a { color:#fff; text-decoration:none; font-weight:600; }
+.main-nav a:hover { text-decoration:underline; }
+
+
+/* ----------------------------------------------------
+   3. HIGHLIGHTS GRID
+   ---------------------------------------------------- */
+.highlights { max-width:1200px; margin:auto; padding:2rem 0; }
+.highlights .grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:1.5rem;
+}
+.card { background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.1); }
+.card img { width:100%; height:180px; object-fit:cover; }
+.card h3 { margin:.5rem 0 .25rem; font-size:1.2rem; }
+.card p { font-size:.9rem; color:#555; }
+
+/* ----------------------------------------------------
+   4. MAP SECTION
+   ---------------------------------------------------- */
+.map-section { margin:2rem 0; }
+.map-section iframe { border:none; border-radius:6px; }
