@@ -25,13 +25,13 @@ html {
   font-family: var(--font-primary);
 }
 body {
-  background: var(--bg, #fff);
-  color: var(--text, #333);
+  background: var(--bg-light);
+  color: var(--text-light);
   line-height: 1.6;
 }
 
 /* ----------------------------------------------------
-   1. HERO SECTION (this is the big (missing) image at the center top
+   1. HERO SECTION (this is the big (missing) image at the center top)
    ---------------------------------------------------- */
 .hero {
   background: url("images/hero.jpg") center/cover no-repeat;
