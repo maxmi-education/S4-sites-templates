@@ -9,8 +9,8 @@
   padding: 0;
 }
 
+/* These variables can later be used with var(), and can be used to ensure consistency across the page*/
 :root {
-  --font-primary: "Montserrat", sans-serif;
   --bg-light: #ffffff;
   --bg-dark: #2c3e50;
   --text-light: #333;
@@ -22,7 +22,7 @@
    1. GLOBAL TYPOGRAPHY
    ---------------------------------------------------- */
 html {
-  font-family: var(--font-primary);
+  font-family: "Montserrat", sans-serif;
 }
 body {
   background: var(--bg-light);
